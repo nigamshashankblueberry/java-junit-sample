@@ -92,35 +92,57 @@
 							<!-- <goal>report-aggregate</goal> -->
 						</goals>
 						<configuration>
-							
-        <outputDirectory>/home/runner/work/java-junit-sample/java-junit-sample/reports/jacoco-aggregate</outputDirectory></configuration></execution>
-							<!-- Make sure we have at least 70% coverage -->
-							<execution>
-								<id>verify-test-coverage</id>
-								<goals>
-									<goal>check</goal>
-								</goals>
-								<configuration>
-									<rules>
-										<rule>
-											<element>BUNDLE</element>
-											<excludes>
-												<exclude>*Mojo</exclude>
-											</excludes>
-											<limits>
-												<limit>
-													<counter>INSTRUCTION</counter>
-													<value>COVEREDRATIO</value>
-													<minimum>70%</minimum>
-												</limit>
-											</limits>
-										</rule>
-									</rules>
-									<outputDirectory>/home/runner/work/java-junit-sample/java-junit-sample/reports/jacoco-aggregate</outputDirectory>
-								</configuration>
-							</execution>
-						</executions>
-					</plugin>
-				</plugins>
-			</build>
-		</project>
+							<outputDirectory>/home/runner/work/java-junit-sample/java-junit-sample/reports/jacoco-aggregate</outputDirectory>
+						</configuration>
+					</execution>
+					<!-- Make sure we have at least 70% coverage -->
+					<execution>
+						<id>verify-test-coverage</id>
+						<goals>
+							<goal>check</goal>
+						</goals>
+						<configuration>
+							<rules>
+								<rule>
+									<element>BUNDLE</element>
+									<excludes>
+										<exclude>*Mojo</exclude>
+									</excludes>
+									<limits>
+										<limit>
+											<counter>INSTRUCTION</counter>
+											<value>COVEREDRATIO</value>
+											<minimum>70%</minimum>
+										</limit>
+									</limits>
+								</rule>
+							</rules>
+							<outputDirectory>/home/runner/work/java-junit-sample/java-junit-sample/reports/jacoco-aggregate</outputDirectory>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>com.sigpwned</groupId>
+				<artifactId>jacoco-badge-maven-plugin</artifactId>
+				<version>0.1.3</version>
+				<executions>
+					<execution>
+						<id>generate-jacoco-badge</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>badge</goal>
+							<!-- Generate a badge from a unified JaCoCo report -->
+						</goals>
+						<configuration>
+							<!-- What coverage level is considered passing? Optional, default 70. -->
+							<passing>70</passing>
+							<!-- Legal values: instruction, branch, line, method. Optional, default instruction. -->
+							<metric>instruction</metric>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>
