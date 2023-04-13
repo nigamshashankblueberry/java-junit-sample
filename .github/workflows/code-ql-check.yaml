@@ -1,4 +1,6 @@
 name: codeql_scan
+on:
+  workflow_dispatch:
 jobs:
   codeql-scan:
   steps:
