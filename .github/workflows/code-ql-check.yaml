@@ -22,7 +22,7 @@ jobs:
           source-root: ./src
        
       - name: Java Build
-        run: mvn clean compile test --file pom.xml
+        run: mvn clean compile --file pom.xml
       
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v2
