@@ -93,7 +93,7 @@
 						</goals>
 						<configuration>
 							
-        <outputDirectory>${github.workspace}/build/reports/jacoco-aggregate</outputDirectory></configuration></execution>
+        <outputDirectory>/home/runner/work/java-junit-sample/java-junit-sample/reports/jacoco-aggregate</outputDirectory></configuration></execution>
 							<!-- Make sure we have at least 70% coverage -->
 							<execution>
 								<id>verify-test-coverage</id>
@@ -116,7 +116,7 @@
 											</limits>
 										</rule>
 									</rules>
-									<outputDirectory>${github.workspace}/build/reports/jacoco-aggregate</outputDirectory>
+									<outputDirectory>/home/runner/work/java-junit-sample/java-junit-sample/reports/jacoco-aggregate</outputDirectory>
 								</configuration>
 							</execution>
 						</executions>
