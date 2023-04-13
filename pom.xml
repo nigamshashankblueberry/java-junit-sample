@@ -92,7 +92,7 @@
 							<!-- <goal>report-aggregate</goal> -->
 						</goals>
 						<configuration>
-							<!-- Multi-module builds should 
+							
         <outputDirectory>${github.workspace}/build/reports/jacoco-aggregate</outputDirectory></configuration></execution>
 							<!-- Make sure we have at least 70% coverage -->
 							<execution>
