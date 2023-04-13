@@ -92,7 +92,7 @@
 							<!-- <goal>report-aggregate</goal> -->
 						</goals>
 						<configuration>
-							<outputDirectory>/home/runner/work/java-junit-sample/java-junit-sample/reports/jacoco-aggregate</outputDirectory>
+							<outputDirectory>${project.reporting.outputDirectory}/jacoco-aggregate</outputDirectory>
 						</configuration>
 					</execution>
 					<!-- Make sure we have at least 70% coverage -->
@@ -117,7 +117,7 @@
 									</limits>
 								</rule>
 							</rules>
-							<outputDirectory>/home/runner/work/java-junit-sample/java-junit-sample/reports/jacoco-aggregate</outputDirectory>
+							<outputDirectory>${project.reporting.outputDirectory}/jacoco-aggregate</outputDirectory>
 						</configuration>
 					</execution>
 				</executions>
