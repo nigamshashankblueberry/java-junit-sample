@@ -1,6 +1,6 @@
 # java-junit-sample
 
-[![codeql_scan](https://github.com/nigamshashankblueberry/java-junit-sample/actions/workflows/code-ql-check.yaml/badge.svg)](https://github.com/nigamshashankblueberry/java-junit-sample/actions/workflows/code-ql-check.yaml) [![Coverage](.github/badges/jacoco.svg)]
+[![codeql_scan](https://github.com/nigamshashankblueberry/java-junit-sample/actions/workflows/code-ql-check.yaml/badge.svg)](https://github.com/nigamshashankblueberry/java-junit-sample/actions/workflows/code-ql-check.yaml) [![Coverage](.github/badges/jacoco.svg)] [![Branches](.github/badges/branches.svg)]
 
 
 This project is meant to show the usage of JUnit, Mockito and Powermock for unit testing in Java.
