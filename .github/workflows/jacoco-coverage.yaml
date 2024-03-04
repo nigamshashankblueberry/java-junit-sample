@@ -2,7 +2,18 @@ name: jacoco-coverage
 
 on:
   workflow_dispatch:
-
+    inputs:
+      environment: 
+        description: "Environment to apply changes"
+        default: "dev"
+        type: choice
+        required: true
+        options:
+          - "dev"
+          - "uat"
+          - "prd"
+env:
+  ENVIRONMENT: ${{ github.event.inputs.environment}}
 jobs:
   build:
     runs-on: ubuntu-latest
