@@ -12,8 +12,7 @@ on:
           - "dev"
           - "uat"
           - "prd"
-env:
-  ENVIRONMENT: ${{ github.event.inputs.environment}}
+
 jobs:
   build:
     environment: ${{ github.event.inputs.environment}}
