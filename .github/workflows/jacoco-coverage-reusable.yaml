@@ -8,7 +8,7 @@ permissions:
 on:
   workflow_dispatch:
     inputs:
-      environment: 
+      LZ_ENVIRONMENT: 
         description: "Environment to apply changes"
         default: "dev"
         type: choice
@@ -23,5 +23,5 @@ jobs:
     uses: nigamshashankblueberry/blueberry-reusable-workflows/.github/workflows/jacoco-coverage.yaml@devops
     secrets: inherit
     with:
-     environment: ${{ github.event.inputs.environment}}
+     environment: ${{ github.event.inputs.LZ_ENVIRONMENT}}
     
