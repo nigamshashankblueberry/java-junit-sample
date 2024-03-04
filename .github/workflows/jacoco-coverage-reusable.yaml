@@ -1,4 +1,7 @@
 name: jacoco-coverage-reusable
+permissions:
+  contents: read
+  id-token: write
 
 on:
   workflow_dispatch:
