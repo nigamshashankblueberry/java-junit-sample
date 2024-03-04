@@ -24,4 +24,5 @@ jobs:
     secrets: inherit
     with:
      ENV: ${{ github.event.inputs.environment}}
+     environment: ${{ github.event.inputs.environment}}
     
